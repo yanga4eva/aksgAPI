@@ -1,0 +1,25 @@
+{
+  "name": "aksgapi",
+  "version": "1.0.0",
+  "description": "Proposed AKSG API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yanga4eva/aksgAPI.git"
+  },
+  "author": "Inyang, Fortunatus",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yanga4eva/aksgAPI/issues"
+  },
+  "homepage": "https://github.com/yanga4eva/aksgAPI#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.9.7"
+  }
+}
