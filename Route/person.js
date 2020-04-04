@@ -22,7 +22,7 @@ router.post('/', (req, res) => {
     const saveUser = person.save(function (err, user) {
         if (err) {return console.error(err)
         } else {
-            res.send(saveUser)
+            res.send("Saved")
         }
     })
 })

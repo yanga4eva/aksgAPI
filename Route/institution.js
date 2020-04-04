@@ -19,7 +19,7 @@ router.post('/', (req, res) => {
     const saveInstitute = institute.save(function (err, user) {
         if (err) {return console.error(err)
         } else {
-            res.send(saveInstitute)
+            res.send("Saved")
         }
     })
 })
