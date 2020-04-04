@@ -4,6 +4,7 @@ const BodyParser = require('body-parser')
 const dotenv = require('dotenv')
 const Port = process.env.PORT || 8000
 const path = require('path')
+const cors = require('cors')
 
 dotenv.config()
 
@@ -18,14 +19,20 @@ Mongoose.connect(
 
 const app = Express()
 
+app.use(BodyParser.json())
+app.use(BodyParser.urlencoded({extended:true}))
+
+//Routes
+const personRoute = require('./Route/person')
+
+// //Middlewares
+app.use('/person', personRoute)
+app.use(cors())
+
 // View Enger
 app.set('view engine', 'ejs')
 app.set('views', path.join(__dirname, 'views'))
 app.use(Express.static(path.resolve('./views')));
-
-
-app.use(BodyParser.json())
-app.use(BodyParser.urlencoded({extended:true}))
 
 app.get('/', (req, res) => {
 
