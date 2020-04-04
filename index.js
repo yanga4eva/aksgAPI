@@ -24,9 +24,11 @@ app.use(BodyParser.urlencoded({extended:true}))
 
 //Routes
 const personRoute = require('./Route/person')
+const instituteRoute = require('./Route/institution')
 
 // //Middlewares
 app.use('/person', personRoute)
+app.use('/institute', instituteRoute)
 app.use(cors())
 
 // View Enger

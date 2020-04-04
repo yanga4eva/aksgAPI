@@ -9,7 +9,7 @@ const personSchema = new Schema({
     lga: String,
     registrationDate: String,
     licensed: Boolean,
-    Ownder: String,
+    Owner: String,
     contact: String
 })
 
