@@ -29,7 +29,7 @@ router.post('/', (req, res) => {
 
 router.get('/',   async (req, res) => {
 
-    const getUser = await person.find({"id":"5e890110c8f7bd00170ee149"}, function (err, result) {
+    const getUser = await person.find({}, function (err, result) {
         if (err) {return console.error(err)
         } else {
             res.json(result)
