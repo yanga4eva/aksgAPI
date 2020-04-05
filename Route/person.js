@@ -27,9 +27,9 @@ router.post('/', (req, res) => {
     })
 })
 
-router.get('/', (req, res) => {
+router.get('/findperson', (req, res) => {
 
-    const getUser =  Person.findOne({"firstname":"okpokam"}, function (err, result) {
+    const getUser =  Person.findOne({"firstname":"okpokam"}, 'firstname lastname', function (err, result) {
         if (err) {return console.error(err)
         } else {
             res.json(result)
