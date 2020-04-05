@@ -27,9 +27,9 @@ router.post('/', (req, res) => {
     })
 })
 
-router.get('/',   async (req, res) => {
+router.get('/', (req, res) => {
 
-    const getUser = await person.find({}, function (err, result) {
+    const getUser = await Person.find({}, function (err, result) {
         if (err) {return console.error(err)
         } else {
             res.json(result)
