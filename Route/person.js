@@ -37,7 +37,19 @@ router.get('/findperson', (req, res) => {
             res.json(result)
         }
     })
+})
     
+
+    router.get('/findall', (req, res) => {
+    var findparams = {'firstname':'okpokam'}
+    var datafilter = 'firstname lastname'
+
+    const getUser =  Person.find({}, 'firstname lastname', function (err, result) {
+        if (err) {return console.error(err)
+        } else {
+            res.json(result)
+        }
+    })
     
 })
 
