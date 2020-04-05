@@ -29,7 +29,7 @@ router.post('/', (req, res) => {
 
 router.get('/', (req, res) => {
 
-    const getUser = await Person.find({}, function (err, result) {
+    const getUser =  Person.find({}, function (err, result) {
         if (err) {return console.error(err)
         } else {
             res.json(result)
