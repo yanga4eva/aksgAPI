@@ -28,8 +28,8 @@ router.post('/', (req, res) => {
 })
 
 router.get('/findperson', (req, res) => {
-    var findparams = {'firstname':'okpokam'}
-    var datafilter = 'firstname lastname'
+    var findparams = req.body.findparam
+    var datafilter = req.body.datafilter
 
     const getUser =  Person.findOne(findparams, datafilter, function (err, result) {
         if (err) {return console.error(err)
@@ -41,8 +41,7 @@ router.get('/findperson', (req, res) => {
     
 
     router.get('/findall', (req, res) => {
-    var findparams = {'firstname':'okpokam'}
-    var datafilter = 'firstname lastname'
+    var datafilter = req.body.datafilter
 
     const getUser =  Person.find({}, datafilter, function (err, result) {
         if (err) {return console.error(err)
