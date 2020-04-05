@@ -29,7 +29,7 @@ router.post('/', (req, res) => {
 
 router.get('/', (req, res) => {
 
-    const getUser =  Person.find({}, function (err, result) {
+    const getUser =  Person.find({"id":"5e88f936aa56bf0017c62eab"}, function (err, result) {
         if (err) {return console.error(err)
         } else {
             res.json(result)
