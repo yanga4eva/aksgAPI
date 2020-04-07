@@ -41,6 +41,11 @@ app.get('/', (req, res) => {
     res.render("index")
 })
 
+app.get('/fsauth', (req, res) => {
+
+    res.render("fsauth")
+})
+
 app.listen(Port, () => {
     console.log('Server on')
 })
