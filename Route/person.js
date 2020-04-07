@@ -3,9 +3,7 @@ const Person = require('../models/person')
 const Food = require('../models/food')
 
 router.get('/food', (req, res, next) => {
-    var country = req.body.country
-
-    const getUser =  Food.findOne({country: req.params.country}, function (err, result) {
+        const getUser =  Food.findOne({"country": req.params.country}, function (err, result) {
         if (err) {return console.error(err)
         } else {
             res.json(result)
