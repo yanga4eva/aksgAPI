@@ -30,7 +30,7 @@ const foodRoute = require('./Route/food')
 // //Middlewares
 app.use('/person', personRoute)
 app.use('/institute', instituteRoute)
-app.use('/institute', foodRoute)
+app.use('/food', foodRoute)
 app.use(cors())
 
 // View Enger
