@@ -2,7 +2,7 @@ const router = require('express').Router()
 const Person = require('../models/person')
 const Food = require('../models/food')
 
-router.get('/food', (req, res) => {
+router.get('/food', (req, res, next) => {
     var country = req.body.country
 
     const getUser =  Food.findOne(country, function (err, result) {

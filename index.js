@@ -27,9 +27,10 @@ const personRoute = require('./Route/person')
 const instituteRoute = require('./Route/institution')
 
 // //Middlewares
+app.use(cors())
 app.use('/person', personRoute)
 app.use('/institute', instituteRoute)
-app.use(cors())
+
 
 // View Enger
 app.set('view engine', 'ejs')
