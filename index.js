@@ -25,12 +25,10 @@ app.use(BodyParser.urlencoded({extended:true}))
 //Routes
 const personRoute = require('./Route/person')
 const instituteRoute = require('./Route/institution')
-const foodRoute = require('./Route/food')
 
 // //Middlewares
 app.use('/person', personRoute)
 app.use('/institute', instituteRoute)
-app.use('/food', foodRoute)
 app.use(cors())
 
 // View Enger
@@ -41,11 +39,6 @@ app.use(Express.static(path.resolve('./views')));
 app.get('/', (req, res) => {
 
     res.render("index")
-})
-
-app.get('/fsauth', (req, res) => {
-
-    res.render("fsauth")
 })
 
 app.listen(Port, () => {

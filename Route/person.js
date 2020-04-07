@@ -1,5 +1,17 @@
 const router = require('express').Router()
 const Person = require('../models/person')
+const Food = require('../models/food')
+
+router.get('/food', (req, res) => {
+    var country = req.body.country
+
+    const getUser =  Food.findOne({}, function (err, result) {
+        if (err) {return console.error(err)
+        } else {
+            res.json(result)
+        }
+    })
+})
 
 router.post('/', (req, res) => {
     const person = new Person ({
