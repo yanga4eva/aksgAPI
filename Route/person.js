@@ -44,7 +44,7 @@ router.get('/', (req, res) => {
     const getUser =  Person.find(query, function (err, result) {
         if (err) {return console.error(err)
         } else {
-            res.json(query)
+            res.json(result)
         }
     })
     
