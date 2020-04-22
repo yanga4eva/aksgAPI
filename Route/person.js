@@ -39,7 +39,7 @@ router.post('/', (req, res) => {
 })
 
 router.get('/', (req, res) => {
-    var query = req.body.params
+    var query = req.params
 
     const getUser =  Person.find({query}, function (err, result) {
         if (err) {return console.error(err)
