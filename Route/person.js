@@ -41,7 +41,7 @@ router.post('/', (req, res) => {
 router.get('/', (req, res) => {
     var datafilter = req.body.datafilter
 
-    const getUser =  Person.find(query).toArray(function (err, result) {
+    const getUser =  Person.find({query}, function (err, result) {
         if (err) {return console.error(err)
         } else {
             res.json(result)
