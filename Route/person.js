@@ -39,7 +39,7 @@ router.post('/', (req, res) => {
 })
 
 router.get('/', (req, res) => {
-    var datafilter = req.body.datafilter
+    var query = req.body.params
 
     const getUser =  Person.find({query}, function (err, result) {
         if (err) {return console.error(err)
