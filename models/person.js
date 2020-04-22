@@ -11,11 +11,17 @@ const personSchema = new Schema({
     addressNo: String,
     streetName: String,
     stateg: String,
+    married: Boolean,
+    spouse: String,
+    kids: Boolean,
     lga: String,
     created: Date,
     occupation: String,
     title: String,
+    employed: Boolean,
     employer: String,
+    infraction: Boolean,
+    medicalCondition: Boolean,
     previousJobs: {
         type : String,
         default: undefined
