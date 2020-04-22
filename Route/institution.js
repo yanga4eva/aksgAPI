@@ -24,9 +24,15 @@ router.post('/', (req, res) => {
     })
 })
 
-router.get('/',   async (req, res) => {
-    
-    res.send('<body><form autocomplete="off" method="POST" action="/person" class="form-inline my-2 my-lg-0" style="float: right; z-index: -1;" ><input class="form-control mr-sm-2" type="text" placeholder="firstname" aria-label="Search" id="verses" name="firstname" value= ""><input class="btn btn-secondary my-2 my-sm-0" type="submit" value="Submit"></form></body>')
+router.get('/findall', (req, res) => {
+    var datafilter = req.body.datafilter
+
+    const institution =  Institute.find({}, datafilter, function (err, result) {
+        if (err) {return console.error(err)
+        } else {
+            res.json(result)
+        }
+    })
     
 })
 

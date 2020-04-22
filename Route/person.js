@@ -38,6 +38,18 @@ router.post('/', (req, res) => {
     })
 })
 
+router.get('/', (req, res) => {
+    var datafilter = req.body.datafilter
+
+    const getUser =  Person.find({}, function (err, result) {
+        if (err) {return console.error(err)
+        } else {
+            res.json(result)
+        }
+    })
+    
+})
+
 router.get('/findperson', (req, res) => {
     var findparams = req.body.findparam
     var datafilter = req.body.datafilter
