@@ -55,8 +55,8 @@ router.post('/', (req, res) => {
 })
 
 router.get('/', (req, res) => {
-    var query = req.query
-    if(query === undefined || query === null){
+    const query = req.query
+    if(query === null){
         res.send("please include query")
     }
     else 
