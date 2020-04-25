@@ -33,7 +33,9 @@ router.post('/', (req, res) => {
         occupation:req.body.occupation,
         title: req.body.title,
         employer: req.body.employer,
-        DOB: req.body.DOB
+        DOB: req.body.DOB,
+        location: req.body.location,
+        age: req.body.age
     })
     const saveUser = person.save(function (err, user) {
         if (err) {return console.error(err)

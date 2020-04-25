@@ -12,6 +12,8 @@ const personSchema = new Schema({
     streetName: String,
     stateg: String,
     married: Boolean,
+    location: String,
+    age: String,
     spouse: String,
     kids: Boolean,
     lga: String,
@@ -22,6 +24,11 @@ const personSchema = new Schema({
     employer: String,
     infraction: Boolean,
     medicalCondition: Boolean,
+    stateIdentificationNumber: {
+        type: Number,
+        index: true,
+        unique: true
+    },
     previousJobs: {
         type : String,
         default: undefined
