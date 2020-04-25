@@ -24,19 +24,9 @@ const personSchema = new Schema({
     employer: String,
     infraction: Boolean,
     medicalCondition: Boolean,
-    stateIdentificationNumber: {
-        type: Number,
-        index: true,
-        unique: true
-    },
-    previousJobs: {
-        type : String,
-        default: undefined
-    },
-    previousAddress: {
-        type: String,
-        default: undefined
-    },
+    stateIdentificationNumber: Number,
+    previousJobs: String,
+    previousAddress: String,
     DOB: Date
 })
 

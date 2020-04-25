@@ -31,6 +31,15 @@ router.post('/', (req, res) => {
         lga: req.body.lga,
         created: Date.now(),
         occupation:req.body.occupation,
+        stateIdentificationNumber: {
+            type: Number,
+            index: true,
+            unique: true
+        },
+        previousAddress:{
+            type : String,
+            default: undefined
+        },
         title: req.body.title,
         employer: req.body.employer,
         DOB: req.body.DOB,
