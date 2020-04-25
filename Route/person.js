@@ -56,13 +56,18 @@ router.post('/', (req, res) => {
 
 router.get('/', (req, res) => {
     var query = req.query
+    if(query === undefined || query === null){
+        res.send("please include query")
+    }
+    else 
+    {
 
     const getUser =  Person.find(query, function (err, result) {
         if (err) {return console.error(err)
         } else {
             res.json(result)
         }
-    })
+    })}
     
 })
 
