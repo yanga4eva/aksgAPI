@@ -9,7 +9,7 @@ const medicalSchema = new Schema({
     treatment: String,
     prescription: Boolean,
     physician: String,
-    insurance: Boolean
+    insurance: Boolean,
 })
 
 

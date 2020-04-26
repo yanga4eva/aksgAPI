@@ -56,7 +56,7 @@ router.post('/', (req, res) => {
 
 router.get('/', (req, res) => {
     const query = req.query
-    if(query === null){
+    if(!query){
         res.send("please include query")
     }
     else 

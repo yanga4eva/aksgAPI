@@ -4,16 +4,16 @@ const Schema = mongoose.Schema
 const occupationSchema = new Schema({
     company: String,
     type: String,
-    addressNo: String,
-    startData: String,
+    address: String,
+    startDate: String,
     status: Boolean,
     primaryID: String,
     streetName: String,
     lga: String,
     supervisor: String,
     income: Number,
-    ceo: String,
-    contact: String
+    ceo:  String,
+    contact: String,
 })
 
 

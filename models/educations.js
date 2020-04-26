@@ -5,7 +5,7 @@ const educationSchema = new Schema({
     institution: String,
     type: String,
     completion: Boolean,
-    startData: String,
+    startDate: String,
     status: Boolean,
     primaryID: String,
     institutionID: Number,
@@ -13,8 +13,8 @@ const educationSchema = new Schema({
     currentLevel: String,
     infractions: Boolean,
     degree: String,
-    gradeLevel: String
+    gradeLevel: String,
 })
 
 
-module.exports = mongoose.model('Occupation', educationSchema)
+module.exports = mongoose.model('Education', educationSchema)
