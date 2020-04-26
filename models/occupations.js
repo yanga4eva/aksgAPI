@@ -11,6 +11,7 @@ const occupationSchema = new Schema({
     streetName: String,
     lga: String,
     supervisor: String,
+    primaryID: String,
     income: Number,
     ceo:  String,
     contact: String,

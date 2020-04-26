@@ -5,11 +5,11 @@ const infractionSchema = new Schema({
     reportingInstitution: String,
     type: String,
     location: String,
+    primaryID: String,
     reportingOfficer: String,
     status: Boolean,
     event: String,
     verdict: String,
-    offender: String,
     victim: String,
 
 })

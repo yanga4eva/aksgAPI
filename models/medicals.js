@@ -10,6 +10,7 @@ const medicalSchema = new Schema({
     prescription: Boolean,
     physician: String,
     insurance: Boolean,
+    primaryID: String,
 })
 
 
