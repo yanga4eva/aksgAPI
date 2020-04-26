@@ -11,7 +11,9 @@ router.post('/', (req, res) => {
         treatment: req.body.treatment,
         prescription: false,
         physician: req.body.physician,
-        insurance: false
+        insurance: false,
+        primaryID: req.body.primaryID
+
     })
     const saveUser = medicals.save(function (err, meds) {
         if (err) {return console.error(err)
