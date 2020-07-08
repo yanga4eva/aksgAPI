@@ -23,8 +23,11 @@
     "dotenv": "^8.2.0",
     "ejs": "^3.0.2",
     "express": "^4.17.1",
+    "firebase": "^7.15.5",
     "firebaseui": "^4.5.0",
     "jsonwebtoken": "^8.5.1",
-    "mongoose": "^5.9.7"
+    "mongoose": "^5.9.7",
+    "node-fetch": "^2.6.0",
+    "re-base": "^4.0.0"
   }
 }

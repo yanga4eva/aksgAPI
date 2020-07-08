@@ -6,6 +6,7 @@ const Port = process.env.PORT || 8082
 const path = require('path')
 const cors = require('cors')
 
+
 dotenv.config()
 
 // Connect to DB
@@ -30,6 +31,7 @@ const medicalRoute = require('./Route/medicals')
 const occupationRoute  =require('./Route/occupations')
 const eduprofileRoute = require('./Route/eduprofile')
 const infractionsRoute = require('./Route/infractions')
+const authentication = require('./Route/authentication')
 
 // //Middlewares
 app.use(cors())
