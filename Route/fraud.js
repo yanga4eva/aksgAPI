@@ -75,7 +75,7 @@ net.train(trainingData, {
 
 const output = net.run(chatData)
 
-res.send(chatData + ' ' + output)
+res.send(output)
 })
 
 
