@@ -1,10 +1,12 @@
 const router = require('express').Router()
 const brain = require('brain.js')
+const {GPU} = require('gpu.js')
+const gpu = new GPU()
 
 
 router.get('/', (req, res) => {
     const chatData = req.query.chat
-    const net = new brain.recurrent.LSTM
+    const net = new brain.recurrent.LSTM()
 
     const fraudData = [
         {
@@ -67,10 +69,11 @@ const trainingData = fraudData.map(item => ({
     output: item.category
 }))
 net.train(trainingData, {
-    iterations: 500,
+    iterations: 100,
     log: stats => {
-        // console.log(stats)
+        console.log(stats)
     }
+    
 })
 
 const output = net.run(chatData)

@@ -27,6 +27,7 @@
     "firebase": "^7.15.5",
     "firebaseui": "^4.5.0",
     "git": "^0.1.5",
+    "gpu.js": "^2.9.5",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.9.7",
     "node-fetch": "^2.6.0",
