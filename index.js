@@ -23,6 +23,19 @@ const app = Express()
 app.use(BodyParser.json())
 app.use(BodyParser.urlencoded({extended:true}))
 
+
+//Square Sandbox
+var SquareConnect = require('square-connect');
+var defaultClient = SquareConnect.ApiClient.instance;
+// Set sandbox url
+defaultClient.basePath = 'https://connect.squareupsandbox.com';
+// Configure OAuth2 access token for authorization: oauth2
+var oauth2 = defaultClient.authentications['oauth2'];
+// Set sandbox access token
+oauth2.accessToken = "EAAAEPl8fqZkjo6Ez5Hu6GieLl_fV5S4MjA8yb4YfBigm6xvzBRx-9JBXp8ejHBO";
+// Pass client to API
+var api = new SquareConnect.LocationsApi();
+
 //Routes
 const personRoute = require('./Route/person')
 const instituteRoute = require('./Route/institution')
@@ -31,7 +44,8 @@ const medicalRoute = require('./Route/medicals')
 const occupationRoute  =require('./Route/occupations')
 const eduprofileRoute = require('./Route/eduprofile')
 const infractionsRoute = require('./Route/infractions')
-const authentication = require('./Route/authentication')
+const authenticationRoute = require('./Route/authentication')
+const fraudRoute = require('./Route/fraud')
 
 // //Middlewares
 app.use(cors())
@@ -42,6 +56,8 @@ app.use('/medicals', medicalRoute)
 app.use('/occupation', occupationRoute)
 app.use('/eduprofile', eduprofileRoute)
 app.use('/infractionsprofile', infractionsRoute)
+app.use('/authentication', authenticationRoute)
+app.use('/fraudai', fraudRoute)
 
 
 // View Enger

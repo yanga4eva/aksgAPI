@@ -72,10 +72,11 @@ router.get('/', (req, res) => {
 })
 
 router.get('/findperson', (req, res) => {
-    var findparams = req.body.findparam
+    var findparams = req.query.findparam
     var datafilter = req.body.datafilter
+    console.log(findparams + ' ' + datafilter)
 
-    const getUser =  Person.findOne(findparams, datafilter, function (err, result) {
+    const getUser =  Person.findOne(findparams, function (err, result) {
         if (err) {return console.error(err)
         } else {
             res.json(result)
