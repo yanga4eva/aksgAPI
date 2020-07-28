@@ -67,9 +67,9 @@ const trainingData = fraudData.map(item => ({
     output: item.category
 }))
 net.train(trainingData, {
-    iterations: 500,
+    iterations: 2000,
     log: stats => {
-        console.log(stats)
+        // console.log(stats)
     }
 })
 
