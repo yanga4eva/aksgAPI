@@ -8,7 +8,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "engine": {
-    "node": "v13.8.0"
+    "node": "13.8.0"
   },
   "repository": {
     "type": "git",
