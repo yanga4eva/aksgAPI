@@ -7,6 +7,9 @@
     "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "engine": {
+    "node": "v13.8.0"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/yanga4eva/aksgAPI.git"
