@@ -2,6 +2,8 @@ import Rebase from 're-base'
 import Firebase from 'firebase'
 import 'firebase/auth'
 
+
+//Hard Coded config variables, use .env
 const config = {
     apiKey: "AIzaSyCKeIhC6SXY5-elvJ6EaeHC-W4a_FeD6cY",
     authDomain: "idguys-923cd.firebaseapp.com",
